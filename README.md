@@ -1,5 +1,5 @@
 # Stack_Overflow_Developer_Survey_Data_Analysis
-![image](https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/367a11ea-113b-4147-898b-6a52ff3adc90)
+
 - <b>Description</b>: This repo is the 2023 Developer Survey Data Analysis Project.
 
 ## Introduction to myself
@@ -8,6 +8,7 @@
 |<img height="180" src="https://github.com/PSLeon24/CEM_Community/assets/59058869/1c4a75a2-fa44-4bde-ba6f-1b9b6868de0b">|Yeong-Min Ko|AI, Computer Vision, Data Analysis|
 
 ### Data Description
+![image](https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/367a11ea-113b-4147-898b-6a52ff3adc90)
 
 ### Schedule
 |date|objective|status|
