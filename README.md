@@ -16,8 +16,8 @@
 |23.11.18 ~ 23.11.18|Data Acquisition and Understand acquired data|O|
 |23.11.19 ~ 23.11.19|Write Worksheets|O|
 |23.11.20 ~ 23.11.20|Data Preprocessing|O|
-|23.11.21 ~ 23.11.23|Data Visualization|in progress|
-|23.11.24 ~ 23.12.01|Configure the Dashboard|-|
+|23.11.21 ~ 23.11.23|Data Visualization|O|
+|23.11.24 ~ 23.12.01|Configure the Dashboard|in progress|
 |23.12.02 ~ 23.12.08|Finish Project / Prepare a presentation|-|
 
 ### My Approach
