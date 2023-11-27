@@ -94,8 +94,8 @@ question_title = st.subheader("")  # Question Title
 st.sidebar.markdown(
     "<h1 style='text-align: center;'>Data Information</h1>", unsafe_allow_html=True
 )
-st.sidebar.text(f"데이터셋의 행의 개수: {add_commas(str(df.shape[0]))}개")
-st.sidebar.text(f"데이터셋의 열의 개수: {add_commas(str(df.shape[1]))}개")
+st.sidebar.info(f"데이터셋의 행의 개수: {add_commas(str(df.shape[0]))}개")
+st.sidebar.info(f"데이터셋의 열의 개수: {add_commas(str(df.shape[1]))}개")
 columns_to_check = [
     "Employment",
     "RemoteWork",
@@ -181,7 +181,10 @@ columns_to_check = [
 selected_column_check = st.sidebar.selectbox("결측치 확인", columns_to_check)
 
 missing_ratio = (df[selected_column_check].isna().sum() / len(df)) * 100
-st.sidebar.text(f"{selected_column_check} 변수의 결측값 비율: {missing_ratio:.2f}%")
+if missing_ratio == 0:
+    st.sidebar.info(f"{selected_column_check} 변수의 결측값 비율: {missing_ratio:.2f}%")
+else:
+    st.sidebar.error(f"{selected_column_check} 변수의 결측값 비율: {missing_ratio:.2f}%")
 st.sidebar.markdown("---")
 
 # Sidebar
@@ -205,6 +208,7 @@ questions = [
     "학사 학위 보유자의 직업 분포는 어떠한가?",
     "석사 학위 보유자의 직업 분포는 어떠한가?",
     "박사 학위 보유자의 직업 분포는 어떠한가?",
+    "학위별 직업 분포는 어떤 차이가 있을까?",
     "상위 3개 직업군의 경력 분포는 어떠한가?",
 ]
 
@@ -497,6 +501,7 @@ elif select_question == "응답자들의 학위 분포는 어떠한가?":
 
 elif select_question == "학사 학위 보유자의 직업 분포는 어떠한가?":
     question_title.subheader(select_question)
+
     # 학사 학위를 가진 사람들의 직업 유형 Top10
     bachelor_data = revised_df[
         revised_df["EdLevel"] == "Bachelor’s degree (B.A., B.S., B.Eng., etc.)"
@@ -539,6 +544,7 @@ elif select_question == "학사 학위 보유자의 직업 분포는 어떠한�
 
 elif select_question == "석사 학위 보유자의 직업 분포는 어떠한가?":
     question_title.subheader(select_question)
+
     # 석사 학위를 가진 사람들의 직업 유형 Top10
     master_data = revised_df[
         revised_df["EdLevel"] == "Master’s degree (M.A., M.S., M.Eng., MBA, etc.)"
@@ -574,6 +580,7 @@ elif select_question == "석사 학위 보유자의 직업 분포는 어떠한�
 
 elif select_question == "박사 학위 보유자의 직업 분포는 어떠한가?":
     question_title.subheader(select_question)
+
     # 박사 학위를 가진 사람들의 직업 유형 Top10
     professional_data = revised_df[
         revised_df["EdLevel"] == "Professional degree (JD, MD, Ph.D, Ed.D, etc.)"
@@ -607,6 +614,132 @@ elif select_question == "박사 학위 보유자의 직업 분포는 어떠한�
 
     plt.xlabel("인원수(명)")
     plt.ylabel("직업")
+    plt.xlim(0, 13)
+
+    st.pyplot()
+
+elif select_question == "학위별 직업 분포는 어떤 차이가 있을까?":
+    question_title.subheader(select_question)
+
+    plt.figure(figsize=(10, 18))
+
+    # 학사 학위를 가진 사람들의 직업 유형 Top10
+    bachelor_data = revised_df[
+        revised_df["EdLevel"] == "Bachelor’s degree (B.A., B.S., B.Eng., etc.)"
+    ]
+    bachelor_job_counts = bachelor_data["DevType"].value_counts()
+
+    bachelor_data["DevType"].value_counts().head(10)
+    # 학사 학위를 가진 사람들의 데이터 추출
+    bachelor_data = revised_df[
+        revised_df["EdLevel"] == "Bachelor’s degree (B.A., B.S., B.Eng., etc.)"
+    ]
+
+    # 학사 학위를 가진 사람들의 직업 빈도수 계산
+    bachelor_job_counts = bachelor_data["DevType"].value_counts().head(10)
+
+    translated_index = {
+        "Developer, full-stack": "풀스택 개발자",
+        "Developer, back-end": "백엔드 개발자",
+        "Developer, front-end": "프론트엔드 개발자",
+        "Developer, desktop or enterprise applications": "데스크톱 또는 기업 애플리케이션 개발자",
+        "Developer, mobile": "모바일 개발자",
+        "Other (please specify):": "기타 ",
+        "Engineering manager": "엔지니어링 매니저",
+        "Developer, embedded applications or devices": "임베디드 개발자",
+        "DevOps specialist": "데브옵스 전문가",
+        "Engineer, data": "데이터 엔지니어",
+    }
+
+    bachelor_job_counts.index = bachelor_job_counts.index.map(translated_index)
+
+    # 첫 번째 subplot: 학사 학위자의 직업 분포
+    plt.subplot(3, 1, 1)
+    sns.barplot(x=bachelor_job_counts, y=bachelor_job_counts.index, palette="viridis")
+    plt.title("학사 학위 보유자의 직업 분포", fontsize=16)
+    plt.xlabel("인원수(명)")
+    plt.ylabel("직업")
+    max_count = bachelor_job_counts.max() + 1000
+    plt.xlim(0, max_count)
+
+    # 석사 학위를 가진 사람들의 직업 유형 Top10
+    master_data = revised_df[
+        revised_df["EdLevel"] == "Master’s degree (M.A., M.S., M.Eng., MBA, etc.)"
+    ]
+    master_job_counts = master_data["DevType"].value_counts()
+
+    translated_index = {
+        "Developer, full-stack": "풀스택 개발자",
+        "Developer, back-end": "백엔드 개발자",
+        "Developer, desktop or enterprise applications": "데스크톱 또는 기업 애플리케이션 개발자",
+        "Developer, front-end": "프론트엔드 개발자",
+        "Other (please specify):": "기타",
+        "Data scientist or machine learning specialist": "데이터 과학자 또는 머신러닝 전문가",
+        "Developer, mobile": "모바일 개발자",
+        "Engineering manager": "엔지니어링 매니저",
+        "Developer, embedded applications or devices": "임베디드 개발자",
+        "Academic researcher": "학술 연구원",
+    }
+
+    master_job_counts.index = master_job_counts.index.map(
+        translated_index
+    )  # 데이터프레임의 인덱스를 한글로 변경
+
+    # 두 번째 subplot: 석사 학위자의 직업 분포
+    plt.subplot(3, 1, 2)
+    sns.barplot(x=master_job_counts, y=master_job_counts.index, palette="viridis")
+    plt.title("석사 학위 보유자의 직업 분포", fontsize=16)
+    plt.xlabel("인원수(명)")
+    plt.ylabel("직업")
+    max_count = (
+        max(
+            bachelor_job_counts.max(),
+            master_job_counts.max(),
+        )
+        + 1000
+    )
+    plt.xlim(0, max_count)
+
+    # 박사 학위를 가진 사람들의 직업 유형 Top10
+    professional_data = revised_df[
+        revised_df["EdLevel"] == "Professional degree (JD, MD, Ph.D, Ed.D, etc.)"
+    ]
+    professional_job_counts = professional_data["DevType"].value_counts()
+
+    # 주어진 인덱스와 대응할 한글 인덱스 딕셔너리
+    translated_index = {
+        "Developer, full-stack": "풀스택 개발자",
+        "Academic researcher": "학술 연구원",
+        "Developer, back-end": "백엔드 개발자",
+        "Data scientist or machine learning specialist": "데이터 과학자 또는 머신러닝 전문가",
+        "Research & Development role": "연구원 및 개발자",
+        "Scientist": "과학자",
+        "Other (please specify):": "기타",
+        "Developer, desktop or enterprise applications": "데스크톱 또는 기업 애플리케이션 개발자",
+        "Senior Executive (C-Suite, VP, etc.)": "고위 경영진 (CEO, 부사장 등)",
+        "Educator": "교육자",
+    }
+
+    professional_job_counts.index = professional_job_counts.index.map(translated_index)
+
+    # 세 번째 subplot: 박사 학위자의 직업 분포
+    plt.subplot(3, 1, 3)
+    sns.barplot(
+        x=professional_job_counts, y=professional_job_counts.index, palette="viridis"
+    )
+    plt.title("박사 학위 보유자의 직업 분포", fontsize=16)
+    plt.xlabel("인원수(명)")
+    plt.ylabel("직업")
+
+    max_count = (
+        max(
+            bachelor_job_counts.max(),
+            master_job_counts.max(),
+            professional_job_counts.max(),
+        )
+        + 1000
+    )
+    plt.xlim(0, max_count)
 
     st.pyplot()
 
