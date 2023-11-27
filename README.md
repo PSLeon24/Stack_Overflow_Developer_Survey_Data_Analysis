@@ -45,6 +45,10 @@ Open your terminal in mac, linux or your command prompt in Windows. Then, type "
 
 - <b>Step4. Data Preprocessing</b>
 
+|Country|LanguageHaveWorkedWith|LanguageWantToWorkWith|EdLevel|LearnCode|
+|--|--|--|--|--|
+|<img width="527" alt="스크린샷 2023-11-28 오전 12 30 02" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/8afada6d-895d-4f5a-b46e-dacfbfc60427">|<img width="525" alt="스크린샷 2023-11-28 오전 12 30 16" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/5dda4734-4192-4b6c-b3e4-e8a4ccb801f1">|<img width="531" alt="스크린샷 2023-11-28 오전 12 30 27" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/8f878179-df54-4e71-8ec1-12f869b75953">|<img width="521" alt="스크린샷 2023-11-28 오전 12 30 41" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/4ac36120-b747-4f54-9cf0-18fa3fcdda74">|<img width="533" alt="스크린샷 2023-11-28 오전 12 30 50" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/5b312f31-c4dc-4a90-a3a2-9897c18b6e11">|
+
 - <b>Step5. Configuring Dashboard using Streamlit(Data Visualization)</b>
 <img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/imgs/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B%20%EC%83%81%EC%9C%84%2010%EA%B0%9C%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.png"/>
 <img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/imgs/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B%20%EC%9A%94%EC%95%BD%20%ED%86%B5%EA%B3%84%EB%9F%89%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.png"/>
