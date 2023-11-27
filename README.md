@@ -22,7 +22,8 @@
 |23.12.02 ~ 23.12.08|Finish Project / Prepare a presentation|in progress|
 
 ### How To Use
-Open your terminal in mac, linux or your command prompt in Windows. Then, type "Streamlit run app.py".
+1. Open your terminal in mac, linux or your command prompt in Windows. Then, type "pip install requirements.txt".
+2. Open your terminal in mac, linux or your command prompt in Windows. Then, type "Streamlit run app.py".
 <img width="571" alt="스크린샷 2023-11-27 오후 11 28 31" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/a5ce9aad-8fb9-4a3a-a7f3-236b8245bd6d">
 
 
