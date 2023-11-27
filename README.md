@@ -1,7 +1,7 @@
 # Stack_Overflow_Developer_Survey_Data_Analysis
 
 - <b>Description</b>: This repo is the 2023 Developer Survey Data Analysis Project.
-- Link: https://developer-data-analysis.streamlit.app/
+- <b>Link</b>: https://developer-data-analysis.streamlit.app/
 
 ## Introduction to myself
 |Selfie|Name|Interests|
