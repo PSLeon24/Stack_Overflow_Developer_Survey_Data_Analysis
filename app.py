@@ -420,6 +420,7 @@ elif select_question == "25~34세의 응답자들이 가장 학습하기 희망�
     st.pyplot(fig)
 
 elif select_question == "프로그래밍을 학습하는 방법에는 어떤 것들이 있을까?":
+    question_title.subheader(select_question)
     learnCode = revised_df["LearnCode"].str.split(";")
     exploded_learnCode = learnCode.explode()
     translated_dict = {
@@ -441,6 +442,7 @@ elif select_question == "프로그래밍을 학습하는 방법에는 어떤 것
     st.pyplot()
 
 elif select_question == "온라인 학습 자료로는 어떤 것들을 활용할까?":
+    question_title.subheader(select_question)
     learnCodeOnline = revised_df["LearnCodeOnline"].str.split(";")
     exploded_learnCodeOnline = learnCodeOnline.explode()
     unique_values = exploded_learnCodeOnline.unique()
@@ -473,6 +475,7 @@ elif select_question == "온라인 학습 자료로는 어떤 것들을 활용�
     st.pyplot()
 
 elif select_question == "응답자들의 학위 분포는 어떠한가?":
+    question_title.subheader(select_question)
     ed_level_counts = revised_df["EdLevel"].value_counts()
     # 인덱스명을 한글로 변경
     ed_level_counts.index = [
@@ -493,6 +496,7 @@ elif select_question == "응답자들의 학위 분포는 어떠한가?":
     st.pyplot()
 
 elif select_question == "학사 학위 보유자의 직업 분포는 어떠한가?":
+    question_title.subheader(select_question)
     # 학사 학위를 가진 사람들의 직업 유형 Top10
     bachelor_data = revised_df[
         revised_df["EdLevel"] == "Bachelor’s degree (B.A., B.S., B.Eng., etc.)"
@@ -534,6 +538,7 @@ elif select_question == "학사 학위 보유자의 직업 분포는 어떠한�
     st.pyplot()
 
 elif select_question == "석사 학위 보유자의 직업 분포는 어떠한가?":
+    question_title.subheader(select_question)
     # 석사 학위를 가진 사람들의 직업 유형 Top10
     master_data = revised_df[
         revised_df["EdLevel"] == "Master’s degree (M.A., M.S., M.Eng., MBA, etc.)"
@@ -568,6 +573,7 @@ elif select_question == "석사 학위 보유자의 직업 분포는 어떠한�
     st.pyplot()
 
 elif select_question == "박사 학위 보유자의 직업 분포는 어떠한가?":
+    question_title.subheader(select_question)
     # 박사 학위를 가진 사람들의 직업 유형 Top10
     professional_data = revised_df[
         revised_df["EdLevel"] == "Professional degree (JD, MD, Ph.D, Ed.D, etc.)"
@@ -605,6 +611,7 @@ elif select_question == "박사 학위 보유자의 직업 분포는 어떠한�
     st.pyplot()
 
 elif select_question == "상위 10개 직업군의 경력 분포는 어떠한가?":
+    question_title.subheader(select_question)
     # 상위 3개의 개발 유형을 추출
     top_devtypes = revised_df["DevType"].value_counts().head(3).index
 
