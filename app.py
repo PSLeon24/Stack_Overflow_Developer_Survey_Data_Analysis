@@ -54,23 +54,6 @@ df["EdLevel"].fillna(most_frequent_ed_level, inplace=True)
 most_frequent_learn_code = df["LearnCode"].mode()[0]
 df["LearnCode"].fillna(most_frequent_learn_code, inplace=True)
 
-# 대체 후 결측값 비율 재확인
-missing_country_percentage_after_fillna = (
-    df["Country"].isna().sum() / len(df["Country"])
-) * 100
-missing_have_worked_with_percentage_after_fillna = (
-    df["LanguageHaveWorkedWith"].isna().sum() / len(df["LanguageHaveWorkedWith"])
-) * 100
-missing_want_to_work_with_percentage_after_fillna = (
-    df["LanguageWantToWorkWith"].isna().sum() / len(df["LanguageWantToWorkWith"])
-) * 100
-missing_ed_level_percentage_after_fillna = (
-    df["EdLevel"].isna().sum() / len(df["EdLevel"])
-) * 100
-missing_learn_code_percentage_after_fillna = (
-    df["LearnCode"].isna().sum() / len(df["LearnCode"])
-) * 100
-
 revised_df = df[
     [
         "Age",
