@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import squarify
 import re
+from matplotlib import font_manager
 
-sns.set(style="whitegrid", font="AppleGothic", palette="pastel")
+sns.set(style="whitegrid", palette="pastel")
 
 
 def add_commas(s):
@@ -18,6 +19,12 @@ st.set_page_config(
     page_title="Developer Survey Analysis",  # 페이지 타이틀 설정
     layout="wide",  # 전체 페이지 레이아웃 설정
 )
+
+
+font_path = "fonts/NanumGothic-Regular.ttf"
+font_prop = font_manager.FontProperties(fname=font_path)
+plt.rc("font", family=font_prop.get_name())
+
 st.set_option("deprecation.showPyplotGlobalUse", False)
 st.markdown(
     """
