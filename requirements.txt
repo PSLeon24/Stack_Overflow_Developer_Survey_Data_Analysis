@@ -25,10 +25,8 @@ folium==0.15.0
 fonttools==4.42.1
 gitdb==4.0.10
 GitPython==3.1.35
-gmpy2_1645462616268/work
 google-crc32c==1.5.0
 gTTS==2.3.2
-idna_1666125579282/work
 ifaddr==0.2.0
 imageio==2.31.3
 importlib-metadata==6.8.0
@@ -36,7 +34,6 @@ install==1.3.5
 ipykernel==6.25.1
 ipython==8.14.0
 jedi==0.19.0
-jinja2_1666908141308/work
 joblib==1.3.2
 jsonschema==4.19.0
 jsonschema-specifications==2023.7.1
@@ -53,8 +50,6 @@ mpmath_1690848269369/work
 msoffcrypto-tool==5.1.1
 nbformat==5.9.2
 nest-asyncio==1.5.7
-networkx_1690562010704/work
-numpy_and_numpy_base_1691091616945/work
 olefile==0.46
 opencv-contrib-python==4.8.0.76
 opencv-python==4.8.0.76
@@ -84,7 +79,6 @@ pygame==2.5.1
 Pygments==2.16.1
 pylibsrtp==0.8.0
 Pympler==1.0.1
-pyopenssl_1690223428943/work
 pyparsing==3.0.9
 pyreadstat==1.2.4
 python-dateutil==2.8.2
@@ -95,7 +89,6 @@ PyYAML==6.0.1
 pyzmq==25.1.1
 qudida==0.0.4
 referencing==0.30.2
-requests_1690400233316/work
 rich==13.5.2
 rpds-py==0.10.2
 scikit-image==0.21.0
@@ -109,7 +102,6 @@ squarify==0.4.3
 stack-data==0.6.2
 streamlit==1.26.0
 streamlit-webrtc==0.47.0
-sympy_1668202392692/work
 tenacity==8.2.3
 threadpoolctl==3.2.0
 tifffile==2023.8.30
