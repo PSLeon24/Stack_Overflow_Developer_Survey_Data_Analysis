@@ -29,7 +29,8 @@ Open your terminal in mac, linux or your command prompt in Windows. Then, type "
 - <b>Step1. Understand Data</b>
    
 - <b>Step2. How to preprocess missing value</b>
-   
+<img width="504" alt="스크린샷 2023-11-28 오전 12 28 01" src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/assets/59058869/c73d11e0-ce7e-47f5-a98e-e98ec0fdf2cb">
+
 - <b>Step3. Write Worksheets</b>
   |No|Question|
   |:--:|:--|
