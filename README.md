@@ -59,7 +59,9 @@ Open your terminal in mac, linux or your command prompt in Windows. Then, type "
 <img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%ED%95%99%EC%82%AC%20%ED%95%99%EC%9C%84%20%EB%B3%B4%EC%9C%A0%EC%9E%90%EC%9D%98%20%EC%A7%81%EC%97%85%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A0%ED%95%9C%EA%B0%80%3F.png"/>
 <img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%EC%84%9D%EC%82%AC%20%ED%95%99%EC%9C%84%20%EB%B3%B4%EC%9C%A0%EC%9E%90%EC%9D%98%20%EC%A7%81%EC%97%85%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A0%ED%95%9C%EA%B0%80%3F.png"/>
 <img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%EB%B0%95%EC%82%AC%20%ED%95%99%EC%9C%84%20%EB%B3%B4%EC%9C%A0%EC%9E%90%EC%9D%98%20%EC%A7%81%EC%97%85%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A0%ED%95%9C%EA%B0%80%3F.png"/>
-<img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%EC%83%81%EC%9C%84%203%EA%B0%9C%20%EC%A7%81%EC%97%85%EA%B5%B0%EC%9D%98%20%EA%B2%BD%EB%A0%A5%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A0%ED%95%9C%EA%B0%80%3F.png?raw=true"/>
+<img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%ED%95%99%EC%9C%84%EB%B3%84%20%EC%A7%81%EC%97%85%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A4%20%EC%B0%A8%EC%9D%B4%EA%B0%80%20%EC%9E%88%EC%9D%84%EA%B9%8C%3F_1.png"/>
+<img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%ED%95%99%EC%9C%84%EB%B3%84%20%EC%A7%81%EC%97%85%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A4%20%EC%B0%A8%EC%9D%B4%EA%B0%80%20%EC%9E%88%EC%9D%84%EA%B9%8C%3F_2.png"/>
+<img src="https://github.com/PSLeon24/Stack_Overflow_Developer_Survey_Data_Analysis/blob/main/images/%EC%83%81%EC%9C%84%203%EA%B0%9C%20%EC%A7%81%EC%97%85%EA%B5%B0%EC%9D%98%20%EA%B2%BD%EB%A0%A5%20%EB%B6%84%ED%8F%AC%EB%8A%94%20%EC%96%B4%EB%96%A0%ED%95%9C%EA%B0%80%3F.png"/>
 
   
 ### Work Records
