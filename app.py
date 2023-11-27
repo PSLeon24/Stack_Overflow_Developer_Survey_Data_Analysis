@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import squarify
 import re
-from matplotlib import font_manager
+import os
+import matplotlib.font_manager as fm  # 폰트 관련 용도 as fm
 
 sns.set(style="whitegrid", palette="pastel")
 
@@ -20,11 +21,6 @@ st.set_page_config(
     layout="wide",  # 전체 페이지 레이아웃 설정
 )
 
-
-font_path = "fonts/NanumGothic-Regular.ttf"
-font_prop = font_manager.FontProperties(fname=font_path)
-plt.rc("font", family=font_prop.get_name())
-
 st.set_option("deprecation.showPyplotGlobalUse", False)
 st.markdown(
     """
@@ -36,6 +32,10 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+font_path = "./fonts/NanumGothic-Regular.ttf"
+font_prop = fm.FontProperties(fname=font_path)
+plt.rc("font", family=font_prop.get_name())
 
 # Import Data
 df = pd.read_csv("./data/survey_results_public.csv")
