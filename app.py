@@ -216,7 +216,7 @@ select_question = st.sidebar.selectbox("확인하고 싶은 질문을 선택하�
 
 st.sidebar.markdown("---")
 
-st.sidebar.text("Made by Yeongmin Ko")
+st.sidebar.text("Developed by Yeongmin Ko")
 
 # Main
 if select_question == "데이터셋 상위 10개 확인하기":
