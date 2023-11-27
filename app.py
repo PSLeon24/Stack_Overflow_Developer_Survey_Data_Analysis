@@ -614,7 +614,6 @@ elif select_question == "박사 학위 보유자의 직업 분포는 어떠한�
 
     plt.xlabel("인원수(명)")
     plt.ylabel("직업")
-    plt.xlim(0, 13)
 
     st.pyplot()
 
