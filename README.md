@@ -75,5 +75,5 @@ Open your terminal in mac, linux or your command prompt in Windows. Then, type "
 |23.11.27(Mon)|I configured the dashboard using Streamlit.|
 
 ### References
-[1] Dataset: https://insights.stackoverflow.com/survey
-[2] Streamlit: https://docs.streamlit.io/
+- [1] Dataset: https://insights.stackoverflow.com/survey
+- [2] Streamlit: https://docs.streamlit.io/
