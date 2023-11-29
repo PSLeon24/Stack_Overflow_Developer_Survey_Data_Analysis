@@ -228,15 +228,15 @@ elif select_question == "연령에 따른 응답자 수는 어떠할까?":
         ]
     )
     translated_age_index = {
-         "Under 18 years old": "Under 18 years old",
-         "18-24 years old": "18-24 years old",
-         "25-34 years old": "25-34 years old",
-         "35-44 years old": "35-44 years old",
-         "45-54 years old": "45-54 years old",
-         "55-64 years old": "55-64 years old",
-         "65 years or older": "65 years or older",
-         "Prefer not to say": "Prefer not to say",
-     }
+        "Under 18 years old": "Under 18 years old",
+        "18-24 years old": "18-24 years old",
+        "25-34 years old": "25-34 years old",
+        "35-44 years old": "35-44 years old",
+        "45-54 years old": "45-54 years old",
+        "55-64 years old": "55-64 years old",
+        "65 years or older": "65 years or older",
+        "Prefer not to say": "Prefer not to say",
+    }
     size_by_age.index = size_by_age.index.map(translated_age_index)
 
     fig, ax = plt.subplots()
@@ -338,7 +338,9 @@ elif select_question == "25~34세의 응답자들이 가장 많이 사용하는 
         autopct="%1.1f%%",
         startangle=140,
     )
-    axes[0].set_title("Programming language usage among 25-34 year olds (Pie Chart)", fontsize=16)
+    axes[0].set_title(
+        "Programming language usage among 25-34 year olds (Pie Chart)", fontsize=16
+    )
 
     # 두 번째 서브플롯 (트리맵)
     squarify.plot(
@@ -491,13 +493,13 @@ elif select_question == "응답자들의 학위 분포는 어떠한가?":
     # 인덱스명을 한글로 변경
     ed_level_counts.index = [
         "Bachelor's degree",
-         "master degree",
-         "Completion of college courses without a degree";
-         "Secondary education (middle school and high school graduate)",
-         "Ph.D. degree (JD, MD, Ph.D, Ed.D, etc.)",
-         "Professional Bachelor’s Degree (A.A., A.S., etc.)",
-         "Graduated from elementary school",
-         "etc",
+        "master degree",
+        "Completion of college courses without a degree",
+        "Secondary education (middle school and high school graduate)",
+        "Ph.D. degree (JD, MD, Ph.D, Ed.D, etc.)",
+        "Professional Bachelor’s Degree (A.A., A.S., etc.)",
+        "Graduated from elementary school",
+        "etc",
     ]
 
     sns.barplot(x=ed_level_counts, y=ed_level_counts.index)
@@ -525,17 +527,17 @@ elif select_question == "학사 학위 보유자의 직업 분포는 어떠한�
     bachelor_job_counts = bachelor_data["DevType"].value_counts().head(10)
 
     translated_index = {
-         "Developer, full-stack": "full-stack developer",
-         "Developer, back-end": "Backend developer",
-         "Developer, front-end": "Front-end developer",
-         "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
-         "Developer, mobile": "Mobile developer",
-         "Other (please specify):": "Other ",
-         "Engineering manager": "Engineering manager",
-         "Developer, embedded applications or devices": "Embedded developer",
-         "DevOps specialist": "DevOps specialist",
-         "Engineer, data": "data engineer",
-     }
+        "Developer, full-stack": "full-stack developer",
+        "Developer, back-end": "Backend developer",
+        "Developer, front-end": "Front-end developer",
+        "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
+        "Developer, mobile": "Mobile developer",
+        "Other (please specify):": "Other ",
+        "Engineering manager": "Engineering manager",
+        "Developer, embedded applications or devices": "Embedded developer",
+        "DevOps specialist": "DevOps specialist",
+        "Engineer, data": "data engineer",
+    }
 
     bachelor_job_counts.index = bachelor_job_counts.index.map(translated_index)
 
@@ -559,21 +561,19 @@ elif select_question == "석사 학위 보유자의 직업 분포는 어떠한�
     master_job_counts = master_data["DevType"].value_counts()
 
     translated_index = {
-         "Developer, full-stack": "full-stack developer",
-         "Developer, back-end": "Backend developer",
-         "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
-         "Developer, front-end": "Front-end developer",
-         "Other (please specify):": "Other",
-         "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
-         "Developer, mobile": "Mobile developer",
-         "Engineering manager": "Engineering manager",
-         "Developer, embedded applications or devices": "Embedded developer",
-         "Academic researcher": "academic researcher",
-     }
+        "Developer, full-stack": "full-stack developer",
+        "Developer, back-end": "Backend developer",
+        "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
+        "Developer, front-end": "Front-end developer",
+        "Other (please specify):": "Other",
+        "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
+        "Developer, mobile": "Mobile developer",
+        "Engineering manager": "Engineering manager",
+        "Developer, embedded applications or devices": "Embedded developer",
+        "Academic researcher": "academic researcher",
+    }
 
-    master_job_counts.index = master_job_counts.index.map(
-        translated_index
-    )
+    master_job_counts.index = master_job_counts.index.map(translated_index)
     plt.figure(figsize=(12, 8))
 
     sns.barplot(x=master_job_counts, y=master_job_counts.index, palette="viridis")
@@ -595,17 +595,17 @@ elif select_question == "박사 학위 보유자의 직업 분포는 어떠한�
 
     # 주어진 인덱스와 대응할 한글 인덱스 딕셔너리
     translated_index = {
-         "Developer, full-stack": "full-stack developer",
-         "Academic researcher": "academic researcher",
-         "Developer, back-end": "Backend developer",
-         "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
-         "Research & Development role": "Researcher and developer",
-         "Scientist": "scientist",
-         "Other (please specify):": "Other",
-         "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
-         "Senior Executive (C-Suite, VP, etc.)": "Senior Executive (CEO, VP, etc.)",
-         "Educator": "Educator",
-     }
+        "Developer, full-stack": "full-stack developer",
+        "Academic researcher": "academic researcher",
+        "Developer, back-end": "Backend developer",
+        "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
+        "Research & Development role": "Researcher and developer",
+        "Scientist": "scientist",
+        "Other (please specify):": "Other",
+        "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
+        "Senior Executive (C-Suite, VP, etc.)": "Senior Executive (CEO, VP, etc.)",
+        "Educator": "Educator",
+    }
 
     professional_job_counts.index = professional_job_counts.index.map(
         translated_index
@@ -644,17 +644,17 @@ elif select_question == "학위별 직업 분포는 어떤 차이가 있을까?"
     bachelor_job_counts = bachelor_data["DevType"].value_counts().head(10)
 
     translated_index = {
-         "Developer, full-stack": "full-stack developer",
-         "Developer, back-end": "Backend developer",
-         "Developer, front-end": "Front-end developer",
-         "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
-         "Developer, mobile": "Mobile developer",
-         "Other (please specify):": "Other ",
-         "Engineering manager": "Engineering manager",
-         "Developer, embedded applications or devices": "Embedded developer",
-         "DevOps specialist": "DevOps specialist",
-         "Engineer, data": "data engineer",
-     }
+        "Developer, full-stack": "full-stack developer",
+        "Developer, back-end": "Backend developer",
+        "Developer, front-end": "Front-end developer",
+        "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
+        "Developer, mobile": "Mobile developer",
+        "Other (please specify):": "Other ",
+        "Engineering manager": "Engineering manager",
+        "Developer, embedded applications or devices": "Embedded developer",
+        "DevOps specialist": "DevOps specialist",
+        "Engineer, data": "data engineer",
+    }
 
     bachelor_job_counts.index = bachelor_job_counts.index.map(translated_index)
 
@@ -674,17 +674,17 @@ elif select_question == "학위별 직업 분포는 어떤 차이가 있을까?"
     master_job_counts = master_data["DevType"].value_counts()
 
     translated_index = {
-         "Developer, full-stack": "full-stack developer",
-         "Developer, back-end": "Backend developer",
-         "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
-         "Developer, front-end": "Front-end developer",
-         "Other (please specify):": "Other",
-         "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
-         "Developer, mobile": "Mobile developer",
-         "Engineering manager": "Engineering manager",
-         "Developer, embedded applications or devices": "Embedded developer",
-         "Academic researcher": "academic researcher",
-     }
+        "Developer, full-stack": "full-stack developer",
+        "Developer, back-end": "Backend developer",
+        "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
+        "Developer, front-end": "Front-end developer",
+        "Other (please specify):": "Other",
+        "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
+        "Developer, mobile": "Mobile developer",
+        "Engineering manager": "Engineering manager",
+        "Developer, embedded applications or devices": "Embedded developer",
+        "Academic researcher": "academic researcher",
+    }
 
     master_job_counts.index = master_job_counts.index.map(
         translated_index
@@ -713,17 +713,17 @@ elif select_question == "학위별 직업 분포는 어떤 차이가 있을까?"
 
     # 주어진 인덱스와 대응할 한글 인덱스 딕셔너리
     translated_index = {
-         "Developer, full-stack": "full-stack developer",
-         "Academic researcher": "academic researcher",
-         "Developer, back-end": "Backend developer",
-         "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
-         "Research & Development role": "Researcher and developer",
-         "Scientist": "scientist",
-         "Other (please specify):": "Other",
-         "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
-         "Senior Executive (C-Suite, VP, etc.)": "Senior Executive (CEO, VP, etc.)",
-         "Educator": "Educator",
-     }
+        "Developer, full-stack": "full-stack developer",
+        "Academic researcher": "academic researcher",
+        "Developer, back-end": "Backend developer",
+        "Data scientist or machine learning specialist": "Data scientist or machine learning specialist",
+        "Research & Development role": "Researcher and developer",
+        "Scientist": "scientist",
+        "Other (please specify):": "Other",
+        "Developer, desktop or enterprise applications": "Desktop or enterprise application developer",
+        "Senior Executive (C-Suite, VP, etc.)": "Senior Executive (CEO, VP, etc.)",
+        "Educator": "Educator",
+    }
 
     professional_job_counts.index = professional_job_counts.index.map(translated_index)
 
