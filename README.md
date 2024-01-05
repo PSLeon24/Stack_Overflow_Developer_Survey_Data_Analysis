@@ -19,7 +19,7 @@
 |23.11.20 ~ 23.11.20|Data Preprocessing|O|
 |23.11.21 ~ 23.11.23|Data Visualization|O|
 |23.11.24 ~ 23.12.01|Configure the Dashboard|O|
-|23.12.02 ~ 23.12.08|Finish Project / Prepare a presentation|in progress|
+|23.12.02 ~ 23.12.08|Finish Project / Prepare a presentation|O|
 
 ### How To Use
 1. Open your terminal in mac, linux or your command prompt in Windows. Then, type "pip install requirements.txt".
