@@ -1,5 +1,4 @@
-
 .DS_Store
-.ipynb_checkpoints/index-checkpoint.ipynb
-*/*.ipynb/*
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 __pycache__/dataset.cpython-310.pyc
