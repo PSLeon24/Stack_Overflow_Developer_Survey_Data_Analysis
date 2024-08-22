@@ -3,7 +3,7 @@
 - <b>Description</b>: This repo is the 2023 Developer Survey Data Analysis Project.
 - <b>Link</b>: https://developer-data-analysis.streamlit.app/
 
-## Introduction to myself
+## Self-Introduction
 |Selfie|Name|Interests|
 |:--:|:--:|:--:|
 |<img height="180" src="https://github.com/PSLeon24/CEM_Community/assets/59058869/1c4a75a2-fa44-4bde-ba6f-1b9b6868de0b">|Yeong-Min Ko|AI, Computer Vision, Data Analysis|
